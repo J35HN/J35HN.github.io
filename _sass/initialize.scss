@@ -1,3 +1,5 @@
+// scss files based from Minima Theme: https://github.com/jekyll/minima/blob/master/_sass/minima/initialize.scss
+
 @charset "utf-8";
 
 // Defaults.
@@ -26,5 +28,6 @@ $on-large: $on-laptop !default;
 }
 
 @import
-    "main"
+    "base",
+    "navigation"
 ;

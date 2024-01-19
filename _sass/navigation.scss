@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 1rem 0.5rem;
+}
+
+.nav__links li a button {
+    cursor: pointer;
+    background: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: solid;
+    border-width: 0.15rem;
+    border-radius: 0.5rem;
+    border-color: #FFFFFF;
+
+    transition: border-color 0.5s ease 0s;
+    text-decoration: none;
+}
+
+.nav__links li a button:hover{
+    border-color: #000000;
+}
+
+.current {
+    color: green;
+}
