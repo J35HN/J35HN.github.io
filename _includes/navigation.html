@@ -11,12 +11,8 @@
     <ul class = "nav__links">
         {% for item in site.data.navigation %}
             <li><a href = "{{item.link}}">
-                <button>{{item.name}}</button>
+                <button {% if page.url == item.link %} class="current" {% endif %}> {{item.name}} </button>
             </a></li>
         {% endfor %}
-        <!-- <li> <a href = "/"><button>Home</button></a> </li>
-        <li> <a href = "/devlog.html"><button>Devlog</button></a> </li>
-        <li> <a href = "/projects.html"><button>Projects</button></a> </li>
-        <li> <a href = "/volunteering.html"><button>Volunteering Experience</button></a> </li> -->
     </ul>
 </nav>

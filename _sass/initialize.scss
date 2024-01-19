@@ -1,0 +1,33 @@
+// scss files based from Minima Theme: https://github.com/jekyll/minima/blob/master/_sass/minima/initialize.scss
+
+@charset "utf-8";
+
+// Defaults.
+$base-font-family: "Gill Sans", sans-serif !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit: 30px !default;
+
+$content-width: 800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+$on-medium: $on-palm !default;
+$on-large: $on-laptop !default;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device){
+        @content;
+    }
+}
+
+@mixin relative-font-size($ratio) {
+    font-size: #{$ratio}rem;
+}
+
+@import
+    "base",
+    "navigation"
+;
