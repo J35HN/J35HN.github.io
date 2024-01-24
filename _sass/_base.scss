@@ -76,3 +76,8 @@ h1, h2, h3, h4, h5, h6 {
     display: table;
     clear: both;
 }
+
+header {
+    padding-top: $spacing-unit * 0.5;
+    padding-bottom: $spacing-unit * 1.25;
+}

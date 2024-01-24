@@ -9,8 +9,9 @@ header {
 }
 
 .nav__links li {
-    display: inline-block;
+    display: inline;
     padding: 1rem 0.5rem;
+    float: left;
 }
 
 .nav__links li a button {
