@@ -4,11 +4,9 @@ title: Home
 
 ---
 
-# Hello world!
-This is a normal paragraph.
+# Jeshua Nava Avila
 
-# H1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Sagittis nisl rhoncus mattis rhoncus urna neque. Et netus et malesuada fames ac turpis egestas integer eget. Nisi vitae suscipit tellus mauris a diam maecenas. Est ullamcorper eget nulla facilisi. Dui vivamus arcu felis bibendum ut tristique. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Quisque sagittis purus sit amet volutpat. Tristique senectus et netus et malesuada fames ac. Quam id leo in vitae. Eget sit amet tellus cras adipiscing enim eu. Tincidunt ornare massa eget egestas purus viverra accumsan in. Nunc id cursus metus aliquam. Magna fermentum iaculis eu non diam. A scelerisque purus semper eget duis. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Nunc consequat interdum varius sit. Cursus eget nunc scelerisque viverra mauris. Purus in mollis nunc sed id semper risus in hendrerit.
+My name is Jeshua Nava Avila, but friends and family call me by the name _Jesh_ (short, simple, and easier to pronounce).
 
 ## h2
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Magna fermentum iaculis eu non diam. Arcu dui vivamus arcu felis bibendum ut tristique et. Platea dictumst vestibulum rhoncus est pellentesque. Nibh ipsum consequat nisl vel. Enim ut tellus elementum sagittis. Augue eget arcu dictum varius duis at consectetur. Mi proin sed libero enim sed faucibus turpis. Potenti nullam ac tortor vitae purus faucibus ornare. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Massa placerat duis ultricies lacus sed turpis tincidunt id. Est sit amet facilisis magna etiam tempor orci. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Viverra tellus in hac habitasse platea dictumst. Consequat id porta nibh venenatis.
