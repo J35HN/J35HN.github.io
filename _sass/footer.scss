@@ -4,23 +4,10 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #FFF;
+    padding-top: $spacing-unit;
 }
 
-.foot__links {
-    list-style: none;
-}
-
-.foot__links li {
-    display: inline;
-    float: left;
-}
-
-.foot__links li a button {
-    cursor: pointer;
-    background: #FFFFFF;
-    border: solid;
-    border-width: 0.15rem;
-    border-radius: 0.5rem;
-    border-color: #FFFFFF;
-    text-decoration: none;
+.foot__items img {
+    height: 35%;
+    width: 35%;
 }
