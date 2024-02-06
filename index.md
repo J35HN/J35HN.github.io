@@ -4,11 +4,37 @@ title: Home
 
 ---
 
-# Jeshua Nava Avila
+# Hello 👋
 
-My name is Jeshua Nava Avila, but friends and family call me by the name _Jesh_ (short, simple, and easier to pronounce).
+My name is **Jeshua Nava Avila**, but you can call me **_Jesh_** (it's shorter).
 
-## h2
-something something something something  something something something something something something something something something something something
+Look at all this blank space ⬇
+.
 
-## h3
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
