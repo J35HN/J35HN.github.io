@@ -1,3 +1,12 @@
 domain: J35HN.github.io
 url: https://J35HN.github.io
 title: Jeshua Nava Avila
+author:
+  name: J35HN
+  email: jeshua.navaavila@gmail.com
+
+description: >
+  Personal page & portfolio of Jeshua Nava Avila.
+
+plugins:
+  - jekyll-feed
