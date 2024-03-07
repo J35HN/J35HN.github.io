@@ -7,10 +7,14 @@ title: School Projects
 # School Projects…
 
 Why does this chapter exist?
+
 Why not write each school project into its own page?
+
 Well, I thought about writing one page per school project, but I think it’s not worth the energy (I’m lazy)…
 
-Even though my university is one of the most prestigious in Mexico, it has not been living up to expectations in the Computer Science degree. Tecnológico de Monterrey is one of the best universities in Latin America if you study business or want to create a career in entrepreneurship. But this has affected the computer science degree, which has turned us, students, more into entrepreneur developers and not completely like a true engineer. Don’t get me wrong, excellent computer science graduates from this university have made an impact on MAANG, have created amazing startups, and we have some cool projects, but in my case, I don’t feel that proud in boasting about them. 
+Even though my university is one of the most prestigious in Mexico, it has not been living up to expectations in the Computer Science degree. Tecnológico de Monterrey is one of the best universities in Latin America if you study business or want to create a career in entrepreneurship. But this has affected the computer science degree, which has turned us, students, more into entrepreneur developers and not completely like a true engineer. 
+
+Don’t get me wrong, excellent computer science graduates from this university have made an impact on MAANG, have created amazing startups, and we have some cool projects, but in my case, I don’t feel that proud in boasting about them. 
 
 So this page will discuss in a general manner my experience with my school projects, how they were, the value from them, and some examples. 
 
