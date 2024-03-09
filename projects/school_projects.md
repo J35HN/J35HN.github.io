@@ -4,8 +4,6 @@ title: School Projects
 
 ---
 
-![Alt text](https://i.imgur.com/vJiCo2K.jpg?1 "a title")
-
 # School Projects…
 
 Why does this chapter exist?
