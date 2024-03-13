@@ -15,7 +15,7 @@ For my volunteering experience, I chose to have Pre-Conference Shifts, these wer
 | ![Ed Kramer in his booth](https://i.imgur.com/ezim8bl.jpg "Meeting Ed Kramer") |
 |:--:|
 | *Meeting Ed Kramer with fellow SIGGRAPH student volunteers* |
-
+|:--:|
 
 For my second Pre-Conference Shift on the 5th of August, I got to work in the Merchandise store. My task involved organizing merchandise, taking care of stock, and handing merchandise to early attendees.
 
