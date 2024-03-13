@@ -127,3 +127,8 @@ a:active {
 img{
     width: 100%;
 }
+
+img + em {
+    font-size: $base-font-size * 0.5;
+    text-align: center;
+}
