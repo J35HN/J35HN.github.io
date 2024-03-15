@@ -33,5 +33,5 @@ The entire proposal was developed in three weeks. This work/project was part of 
 
 | ![The team presenting our proposal.](https://i.imgur.com/WdlyL6i.png "The team presenting our proposal") |
 |:--:|
-| *The team presenting our proposal.* |
+| *The team presenting our proposal* |
 |:--:|
