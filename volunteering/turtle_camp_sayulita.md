@@ -10,9 +10,9 @@ The Turtle Camp of Sayulita is a voluntary community project with the goal of re
 ## My Work
 My volunteering primarily revolved around translating Spanish to English for sea turtle release events. While the leader of this volunteer community presented their activities and safety guidelines in Spanish to the public, I translated for the non-Spanish speakers. The translation was indispensable because we talked about the correct handling of sea turtle babies and the importance of protecting sea turtles (and other information on how to help the camp). During these events, the attendees were mostly tourists outside of Mexico.
 
-| ![High school Jesh talking and giving instructions to tourist at Sayulita](https://i.imgur.com/t6hWLz2.jpg "High school Jesh talking and giving instructions to tourist at Sayulita") |
+| ![High school Jesh talking and giving instructions to tourists at Sayulita](https://i.imgur.com/t6hWLz2.jpg "High school Jesh talking and giving instructions to tourists at Sayulita") |
 |:--:|
-| *High school Jesh talking and giving instructions to tourist at Sayulita* |
+| *High school Jesh talking and giving instructions to tourists at Sayulita* |
 |:--:|
 
 After two weeks of volunteering, I wrote a 49-page document (part of a school activity) sharing my experience volunteering at this sea turtle camp.
