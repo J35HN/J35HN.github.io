@@ -39,6 +39,8 @@ During the event, from the 6th to the 10th of August, all of my work involved as
 ## What was valuable
 I didn’t attend all the sessions that were planned during the event, but I don’t regret it. What made my volunteering experience valuable during the conference was the people I met. People from all around the world came to SIGGRAPH 2023, some of them very young and some of them very old, some of them artists and others engineers, some who talked English and others who I barely understood. But everybody who came had something to share with others, and that is what I did with my volunteering friends. I shared my life experiences and culture with them, and I also received stories of their experiences and culture.
 
+After a few months, I had the pleasure to give a talk to fellow CS engineers at my school, with my professor [Ken Bauer](https://kenbauer.me/)! This meeting allowed me to share my experience at SIGGRAPH, and motivate students to apply for the next event. You can check this 20-minute talk [here](https://www.youtube.com/watch?v=r9XU7o5uUUs&ab_channel=KenBauer).
+
 | ![My SV shirt](https://i.imgur.com/VKNvjDF.jpg "https://i.imgur.com/VKNvjDF.jpg") |
 |:--:|
 | *My SV shirt* |
