@@ -2,7 +2,9 @@
   link: /
 - name: Devlog / Blog
   link: /devlog.html
+- name: Demos
+  link: /demos.html
 - name: Projects
   link: /projects.html
-- name: Volunteering Experience
-  link: /volunteering.html
+- name: Experiences
+  link: /experiences.html
