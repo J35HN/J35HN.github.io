@@ -47,9 +47,9 @@ In my fifth semester, we worked with El Banco de Alimentos de México ([BAMX](ht
 
 In my sixth semester, we worked with IBM, and the challenge was to create a “dashboard” that could manage and visualize data from Excel files. 
 
-| ![Slide from our final presentation, showing the home page of our website](https://i.imgur.com/TFQ3Uv3.png "Slide from our final presentation, showing frames of our app") |
+| ![Slide from our final presentation, showing frames of our app](https://i.imgur.com/TFQ3Uv3.png "Slide from our final presentation, showing the home page of our website") |
 |:--:|
-| *Slide from our final presentation, showing frames of our app* |
+| *Slide from our final presentation, showing the home page of our website* |
 |:--:|
 
 ## What is valuable from my school projects?
