@@ -24,22 +24,50 @@ My school projects are based on solving a problem that could or is present in th
 
 At the start of each course, usually in the first week, they present to us our partner or our situation to “fix” or find a solution during 5, 10, or 15 weeks. At the end of the course, we present our project (or solution) to the company or professors. 
 
+| ![With our training partner "Netica", on my last semester](https://i.imgur.com/TNp8GDO.png "With our training partner "Netica", on my last semester") |
+|:--:|
+| *With our training partner "Netica", on my last semester* |
+|:--:|
+
 ## Some school projects
 
-In my fourth semester, my team and I worked with [IJALTI](https://www.ijalti.org.mx/). IJALTI in Spanish means Instituto Jalisciense de Tecnologías de la Información, they are a non-profit organization with the main goal of promoting and boosting the use, development, and exploitation of computer technologies. 
-The situation was to create a web platform or website for a job board for IJALTI. 
+In my fourth semester, my team and I worked with [IJALTI](https://www.ijalti.org.mx/). IJALTI in Spanish means Instituto Jalisciense de Tecnologías de la Información, they are a non-profit organization with the main goal of promoting and boosting the use, development, and exploitation of computer technologies. The situation was to create a web platform or website for a job board for IJALTI. 
 
-In my fifth semester, we worked with El Banco de Alimentos de México ([BAMX](https://bamx.org.mx/)). BAMX is a non-profit social organization that focuses on rescuing food and delivering it to families, communities, and institutions. 
-Our challenge was to create a mobile application that helped people organize and create strategic places to salvage food. 
+| ![Frame from a demo video of our website](https://i.imgur.com/xfDPR8t.png "Frame from a demo video of our website") |
+|:--:|
+| *Frame from a demo video of our website* |
+|:--:|
+
+In my fifth semester, we worked with El Banco de Alimentos de México ([BAMX](https://bamx.org.mx/)). BAMX is a non-profit social organization that focuses on rescuing food and delivering it to families, communities, and institutions. Our challenge was to create a mobile application that helped people organize and create strategic places to salvage food. 
+
+| ![Slide from our final presentation, showing frames of our app](https://i.imgur.com/YpLD6Ss.png "Slide from our final presentation, showing frames of our app") |
+|:--:|
+| *Slide from our final presentation, showing frames of our app* |
+|:--:|
 
 In my sixth semester, we worked with IBM, and the challenge was to create a “dashboard” that could manage and visualize data from Excel files. 
+
+| ![Slide from our final presentation, showing the home page of our website](https://i.imgur.com/TFQ3Uv3.png "Slide from our final presentation, showing frames of our app") |
+|:--:|
+| *Slide from our final presentation, showing frames of our app* |
+|:--:|
 
 ## What is valuable from my school projects?
 
 Apart from gaining knowledge and experience in developing web and mobile applications, we practiced direct communication with the training partners. We always start by soliciting requirements for our project. We also have constant feedback on our work, and we have Q&A sessions. By the end of the course, we do a formal presentation of our solutions to the training partners. 
+
+| ![A final presentation for our training partner IBM](https://i.imgur.com/WmtgIsb.png "A final presentation for our training partner IBM") |
+|:--:|
+| *A final presentation for our training partner IBM* |
+|:--:|
 
 ## What was my role in my teams?
 
 Because web or mobile development has never been a passion of mine, I was doing the minimum when it came to writing code and working with technology stacks. But I always had the mentality to help in everything I could, and I promised to be part of the development of projects, and that sometimes meant doing some peer programming. 
 
 Mostly, I took care of project management, documentation, and creating presentations and documents that were homework or school-related deadlines. I enjoy how to organize and manage a project, so I kept track of our progress and obstacles. I helped with the deadlines for homework and work related to the school deliverables, which meant documenting our project and making texts presentable for our training partner. 
+
+| ![README.md of a private repository](https://i.imgur.com/gGrW6CW.png "README.md of a private repository") |
+|:--:|
+| *README.md of a private repository* |
+|:--:|
