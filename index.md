@@ -25,6 +25,9 @@ My name is **Jeshua Nava Avila**, but you can call me **_Jesh_**.
     var opponentPaddleX = 1;
     var opponentPaddleY = 1;
 
+    var playerScore = 0;
+    var opponentScore = 0;
+
     const PADDLE_HEIGHT = 60;
     const PADDLE_WIDTH = 10;
     const BALL_RADIUS = 7;
@@ -101,6 +104,11 @@ My name is **Jeshua Nava Avila**, but you can call me **_Jesh_**.
         drawCircle(ballX, ballY, BALL_RADIUS, "FloralWhite");
         // Player paddle.
         drawRect(playerPaddleX, playerPaddleY - PADDLE_HEIGHT / 2, PADDLE_WIDTH, PADDLE_HEIGHT, "white");
+        // Scores.
+        canvasContext.font = "30px Verdana";
+        canvasContext.fillText(playerScore, 0 + (canvas.width * 0.2), canvas.height * 0.5 - 15);
+        canvasContext.font = "30px Verdana";
+        canvasContext.fillText(opponentScore, canvas.width - (canvas.width * 0.2), canvas.height * 0.5 - 15);
     }
 
     function moveOpponent()
@@ -108,7 +116,7 @@ My name is **Jeshua Nava Avila**, but you can call me **_Jesh_**.
         // Update position in Y axis with the Y axis of the ball.
         opponentPaddleY = ballY - PADDLE_HEIGHT / 2;
         // Shift to be in centered with the ball.
-        drawRect(opponentPaddleX, opponentPaddleY + PADDLE_HEIGHT / 2, PADDLE_WIDTH, PADDLE_HEIGHT, "white");
+        drawRect(opponentPaddleX, opponentPaddleY, PADDLE_WIDTH, PADDLE_HEIGHT, "white");
     }
 
     function moveBall()
@@ -117,8 +125,15 @@ My name is **Jeshua Nava Avila**, but you can call me **_Jesh_**.
         ballY += ballSpeedY;
 
         // Detec if ball hits edges.
-        if (ballX > canvas.width + BALL_RADIUS || ballX < 0 - BALL_RADIUS)
+        if (ballX > canvas.width + BALL_RADIUS)
         {
+            playerScore += 1;
+            ballReset();
+        }
+        
+        if (ballX < 0 - BALL_RADIUS)
+        {
+            opponentScore += 1;
             ballReset();
         }
 
@@ -133,13 +148,17 @@ My name is **Jeshua Nava Avila**, but you can call me **_Jesh_**.
         {
             console.log("Hit opponent paddle");
             ballSpeedX *= -1;
+            var deltaY = ballY - (opponentPaddleY + PADDLE_HEIGHT / 2);
+            ballSpeedY = deltaY * 0.35;
         }
 
         // Detect if ball hits the player's paddle.
-        if (ballX - BALL_RADIUS <= playerPaddleX + PADDLE_WIDTH && (ballY >= playerPaddleY && ballY <=playerPaddleY + PADDLE_HEIGHT))
+        if (ballX - BALL_RADIUS <= playerPaddleX + PADDLE_WIDTH && (ballY >= playerPaddleY - PADDLE_HEIGHT / 2 && ballY <=playerPaddleY + PADDLE_HEIGHT / 2))
         {
             console.log("Hit player's paddle");
             ballSpeedX *= -1;
+            var deltaY = ballY - playerPaddleY;
+            ballSpeedY = deltaY * 0.35;
         }
 
     }
