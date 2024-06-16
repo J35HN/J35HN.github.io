@@ -1,7 +1,5 @@
 - name: Home
   link: /
-- name: Devlog / Blog
-  link: /devlog.html
 - name: Demos
   link: /demos.html
 - name: Projects
