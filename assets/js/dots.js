@@ -60,7 +60,7 @@ window.onload = function()
     canvas.addEventListener("keydown", onKeyDownEvent);
 }
 
-// Clases.
+// Classes.
 class circle {
     radius = 7.5;
     x = canvasMiddleX;
