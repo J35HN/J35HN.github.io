@@ -74,7 +74,7 @@ Some of my best works. All of it created and owned by Jeshua Nava Avila.
 
 | ![52_derp](https://i.imgur.com/ZGNAQgB.png "52_derp") |
 |:--:|
-| *52_derp+ |
+| *52_derp* |
 |:--:|
 
 | ![50_pain](https://i.imgur.com/XZj91RR.png "50_pain") |
