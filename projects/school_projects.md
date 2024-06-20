@@ -18,7 +18,7 @@ Don’t get me wrong, excellent computer science graduates from this university 
 
 So this page will discuss in a general manner my experience with my school projects, how they were, the value from them, and some examples. 
 
-## How are the school projects?
+## What were my school projects?
 
 My school projects are based on solving a problem that could or is present in the industry or world. They are called Retos, which translates to “challenges”. These challenges could be situations from around the world, like helping traffic, detecting malaria, creating a smart cup, etc. Or, these challenges could be situations from “training partners” (socio formadores in Spanish). 
 
