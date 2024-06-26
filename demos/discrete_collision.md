@@ -12,4 +12,6 @@ title: Discrete Collision
 </html>
 
 ## Controls
-None for now :)
+_(Be sure to click the canvas first)_
+
+**Spacebar** - Toggles ball movement.

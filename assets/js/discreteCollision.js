@@ -3,6 +3,11 @@ const FRAMES_PER_SECOND = 60;
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 480;
 
+const INNER_CANVAS_WIDTH = CANVAS_WIDTH * 0.8;
+const INNER_CANVAS_HEIGHT = CANVAS_HEIGHT * 0.5;
+const INNER_CANVAS_X = CANVAS_WIDTH * 0.1;
+const INNER_CANVAS_Y = CANVAS_HEIGHT * 0.3;
+
 var canvas;
 var canvasContext;
 
@@ -17,22 +22,28 @@ class ball
     posY = 0;
     radius = 0;
     accelerationX = 0;
-    accelerationY = 20;
+    accelerationY = 0;
     velocityX = 0;
     velocityY = 0;
-    color = "";
+    color = "#cacaca";
 
 
-    constructor(posX = 69, posY = 69, radius = 6.9, velocityX = 69/69, velocityY = 69/69,
-        color = "#CACACA")
+    constructor(_posX = 69/69, _posY = 69/69, _radius = (69/69)*10)
     {
-        this.posX = posX;
-        this.posY = posY;
-        this.radius = radius;
-        this.velocityX = velocityX;
-        this.velocityY = velocityY;
-        this.color = color;
+        this.posX = _posX;
+        this.posY = _posY;
+        this.radius = _radius;
     }
+
+    get posX(){ return this.posX; }
+    set posX(value){ this.posX = value; }
+    set posY(value){ this.posY = value; }
+    set radius(value){ this.radius = value; }
+    set accelerationX(value){ this.accelerationX = value; }
+    set accelerationY(value){ this.accelerationY = value; }
+    set velocityX(value){ this.velocityX = value; }
+    set velocityY(value){ this.velocityY = value; }
+    set color(value){ this.color = value; }
 
     draw(cc)
     {
@@ -47,23 +58,23 @@ class ball
 
     move()
     {
-        this.velocityX = this.velocityX + (this.accelerationX * deltaTime);
-        this.velocityY = this.velocityY + (this.accelerationY * deltaTime);
+        this.velocityX = this.velocityX + this.accelerationX * deltaTime;
+        this.velocityY = this.velocityY + this.accelerationY * deltaTime;
 
-        this.posX = this.posX + (this.velocityX * deltaTime);
-        this.posY = this.posY + (this.velocityY * deltaTime);
+        this.posX = this.posX + this.velocityX * deltaTime;
+        this.posY = this.posY + this.velocityY * deltaTime;
 
         this.handleBoxCollision();
     }
 
     handleBoxCollision()
     {
-        if ( this.posX - this.radius <= 0 || this.posX + this.radius >= CANVAS_WIDTH )
+        if ( this.posX - this.radius <= INNER_CANVAS_X || this.posX + this.radius >= INNER_CANVAS_X + INNER_CANVAS_WIDTH )
         {
             this.velocityX *= -1;
         }
 
-        if ( this.posY - this.radius <= 0 || this.posY + this.radius >= CANVAS_HEIGHT )
+        if ( this.posY - this.radius <= INNER_CANVAS_Y || this.posY + this.radius >= INNER_CANVAS_Y + INNER_CANVAS_HEIGHT )
         {
             this.velocityY *= -1;
         }
@@ -90,9 +101,62 @@ class ball
     }
 }
 
-// Canvas.
-var myBall = new ball(100, 200, 20, 50, 50, "#CCA8E0");
+// Variables.
+var stopBallMovement = false;
 
+var myBall = new ball( canvasMiddleX, canvasMiddleY, 15 );
+myBall.velocityX = 100;
+myBall.velocityY = 200;
+myBall.color = "#b1a2ca";
+
+// Functions
+function handleBallVelocityY()
+{
+    if ( Math.abs(myBall.velocityY) == 200 ) 
+    {
+        // Need to preserve direction, and we obtain it by dividing the velocity by itself;
+        // considering the edge case if the direction is negative.
+        myBall.velocityY = 2000 * (Math.abs(myBall.velocityY) / myBall.velocityY);
+    }
+    else 
+    {
+        myBall.velocityY = 200 * (Math.abs(myBall.velocityY) / myBall.velocityY);
+    } 
+}
+
+function handleDeltaTime()
+{
+    if ( deltaTime == 1 / FRAMES_PER_SECOND ) 
+    {
+        deltaTime = 1 / 120;
+    }
+    else
+    {
+        deltaTime = 1 / FRAMES_PER_SECOND;
+    }
+}
+
+/// Canvas Events.
+function onKeyDownEvent(event)
+{
+    if ( event.code == "Space" )
+    {
+        stopBallMovement = !stopBallMovement;
+    }
+
+    if ( event.code == "KeyT" )
+    {
+        handleBallVelocityY();
+    }
+
+    if ( event.code == "KeyD" )
+    {
+        handleDeltaTime();
+        console.log(deltaTime);
+    }
+}
+
+// Canvas.
 window.onload = function()
 {
     canvas = document.getElementById("gameCanvas");
@@ -106,8 +170,8 @@ window.onload = function()
         requestAnimationFrame(animate);
     }
 
-
     // Events.
+    canvas.addEventListener("keydown", onKeyDownEvent);
 }
 
 function drawCanvas()
@@ -115,12 +179,12 @@ function drawCanvas()
     // Black Canvas.
     canvasContext.fillStyle = "#000000";
     canvasContext.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    ///. 
 
-    myBall.move();
+    // Inner box.
+    canvasContext.fillStyle = "#ffffff";
+    canvasContext.fillRect(INNER_CANVAS_X, INNER_CANVAS_Y, INNER_CANVAS_WIDTH, INNER_CANVAS_HEIGHT);
+
+    if ( !stopBallMovement ) {myBall.move(); }
     myBall.draw(canvasContext);
 
-
 }
-
-
