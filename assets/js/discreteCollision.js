@@ -1,6 +1,6 @@
 // General.
 const FRAMES_PER_SECOND = 60;
-const CANVAS_WIDTH = 400;
+const CANVAS_WIDTH = 740;
 const CANVAS_HEIGHT = 480;
 
 const INNER_CANVAS_WIDTH = CANVAS_WIDTH * 0.8;
@@ -14,6 +14,9 @@ var canvasContext;
 var canvasMiddleX = CANVAS_WIDTH / 2;
 var canvasMiddleY = CANVAS_HEIGHT / 2;
 var deltaTime = 1 / FRAMES_PER_SECOND;
+
+var stopBallMovement = false;
+var tunnelingActive = false;
 
 // Classes.
 class ball
@@ -53,7 +56,7 @@ class ball
         cc.arc(this.posX, this.posY, this.radius, 0, Math.PI*2, true);
         cc.fill();
 
-        this.drawVelocityAndAcceleration(cc, 2);
+        this.drawInformation(cc, 2);
     }
 
     move()
@@ -80,7 +83,7 @@ class ball
         }
     }
 
-    drawVelocityAndAcceleration(cc, opt = 0)
+    drawInformation(cc, opt = 0)
     {
         if ( opt > 0 )
         {
@@ -95,15 +98,15 @@ class ball
         }
         else if ( opt == 2 )
         {
-            cc.fillText("p (" + this.posX.toFixed(2) + ", " + this.posY.toFixed(2) + ")", CANVAS_WIDTH / 6, CANVAS_HEIGHT / 6 - 20);
-            cc.fillText("v (" + this.velocityX + ", " + this.velocityY.toFixed(2) + ")", CANVAS_WIDTH / 6, CANVAS_HEIGHT / 6);
+            cc.fillText("p (" + this.posX.toFixed(2) + ", " + this.posY.toFixed(2) + ")", CANVAS_WIDTH / 2.5, CANVAS_HEIGHT / 7);
+            cc.fillText("v (" + this.velocityX + ", " + this.velocityY.toFixed(2) + ")", CANVAS_WIDTH / 2.5, CANVAS_HEIGHT / 7 + 20);
+            cc.fillText("Tunneling: " + tunnelingActive, CANVAS_WIDTH / 2.5, CANVAS_HEIGHT / 7 + 40);
+            cc.fillText("deltaTime: 1/" + 1/deltaTime, CANVAS_WIDTH / 2.5, CANVAS_HEIGHT / 7 + 60);
         }
     }
 }
 
-// Variables.
-var stopBallMovement = false;
-
+// Instances.
 var myBall = new ball( canvasMiddleX, canvasMiddleY, 15 );
 myBall.velocityX = 100;
 myBall.velocityY = 200;
@@ -117,10 +120,12 @@ function handleBallVelocityY()
         // Need to preserve direction, and we obtain it by dividing the velocity by itself;
         // considering the edge case if the direction is negative.
         myBall.velocityY = 2000 * (Math.abs(myBall.velocityY) / myBall.velocityY);
+        tunnelingActive = true;
     }
     else 
     {
         myBall.velocityY = 200 * (Math.abs(myBall.velocityY) / myBall.velocityY);
+        tunnelingActive = false;
     } 
 }
 
@@ -128,7 +133,7 @@ function handleDeltaTime()
 {
     if ( deltaTime == 1 / FRAMES_PER_SECOND ) 
     {
-        deltaTime = 1 / 120;
+        deltaTime = 1 / 360;
     }
     else
     {
@@ -152,7 +157,6 @@ function onKeyDownEvent(event)
     if ( event.code == "KeyD" )
     {
         handleDeltaTime();
-        console.log(deltaTime);
     }
 }
 
