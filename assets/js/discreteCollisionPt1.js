@@ -144,7 +144,7 @@ function handleDeltaTime()
 /// Canvas Events.
 function onKeyDownEvent(event)
 {
-    if ( event.code == "Space" )
+    if ( event.code == "KeyJ" )
     {
         stopBallMovement = !stopBallMovement;
     }
