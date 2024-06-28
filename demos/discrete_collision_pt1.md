@@ -8,7 +8,7 @@ title: Discrete Collision Pt1
 
 <html>
 <canvas id = "gameCanvas" width = "740" height = "480"></canvas>
-    <script type = "application/javascript" src = "/assets/js/discreteCollision.js"> </script>
+    <script type = "application/javascript" src = "/assets/js/discreteCollisionPt1.js"> </script>
 </html>
 
 ## Controls
@@ -133,3 +133,6 @@ function handleBallVelocityY()
 ## Resources
 1. _Building Collision Simulations: An Introduction to Computer Graphics_ by **Reducible**, on [YouTube](https://www.youtube.com/watch?v=eED4bSkYCB8&t).
 2. _Video Game Physics Tutorial - Part II: Collision Detection for Solid Objects_ written by **Nilson Souto**, on [Toptal.com](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects). 
+
+
+_Last time modified: 27/06/2024_
