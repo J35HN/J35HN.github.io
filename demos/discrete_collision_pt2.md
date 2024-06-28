@@ -32,14 +32,16 @@ In this case, you can control whether the canvas animates in 24 frames per secon
 per second. I was able to control the fps of our canvas thanks to this
 [article](https://chriscourses.com/blog/standardize-your-javascript-games-framerate-for-different-monitors).
 Just that in this case I had to do some modifications so that our ball movement and the canvas
-respected the selected frames per second. 
+respected the selected frame rate. 
 
 While having 24 frames per second in our canvas with tunneling enabled, we can see our ball go out
 our box borders by a considerable amount. But, if we change our frames to 60 frames per second,
 this effect is reduced or canceled completely. 
 
-If you wish to see the source code, follow this link.
+If you wish to see the source code, follow this [link](https://github.com/J35HN/J35HN.github.io/blob/main/assets/js/discreteCollisionPt2.js).
 
 ## Resources
 1. _Standardize your JavaScript games' framerate for different monitors_ written by **Christopher Lis**
 , on [Chriscourses.com](https://chriscourses.com/blog/standardize-your-javascript-games-framerate-for-different-monitors).
+
+_Last time modified: 28/06/2024_
