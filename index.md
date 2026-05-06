@@ -19,4 +19,4 @@ I use [Instagram](https://www.instagram.com/jeshua.navaavila/) for my photograph
 
 I’m on [LinkedIn](https://www.linkedin.com/in/jeshuanavaavila/) and [Github](https://github.com/J35HN).
 
-The repository of this page is [here. OMG SUPER LONG TEXT aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa](https://github.com/J35HN/J35HN.github.io)
+The repository of this page is [here.](https://github.com/J35HN/J35HN.github.io)
