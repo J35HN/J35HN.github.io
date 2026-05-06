@@ -5,3 +5,4 @@ _site
 *.lock
 .vscode
 vendor
+Gemfile.lock
