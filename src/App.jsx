@@ -7,10 +7,10 @@ import './App.css'
 function App() {
 
 return (
-  <div style = {{ fontFamily: 'sans-serif', textAlign: 'center', marginTop: '100px' }} >
+  <main id = "homepage">
     <h1>Hello World! 👋</h1>
     <p>Portfoilio page still under construction. Come back soon!</p>
-  </div>
+  </main>
   )
 }
 
