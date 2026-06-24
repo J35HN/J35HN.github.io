@@ -8,9 +8,11 @@ function App() {
 
 return (
   <main id = "homepage">
-    <h1>Hello World! 👋</h1>
-    <p>Portfoilio page still under construction. Come back soon!</p>
-  </main>
+    <div className = "center-body">
+      <h1>Hello World! 👋</h1>
+      <p>Portfoilio page still under construction. Come back soon!</p>
+    </div>
+ </main>
   )
 }
 
