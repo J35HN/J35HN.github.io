@@ -1,19 +1,39 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #000;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+
+  /* Webpage color variables */
+  --raw-concrete: #9e9e8e;
+  --iron-oxide: #7a3b2e;
+  --acid-yellow: #d4c422;
+  --bone: f5f0e8;
+  --asphalt: #1a1a1a;
+  --blood-red: #b01c1c;
+  --industrial-green: #3b5e3a;
+  --cobalt: #1b3a6b;
+  --tezontle: #8c2e1a;
+  --barragan-magenta: #c0316b;
+  --cenote: #1b6bb6;
+  --obsidian: #1a1520;
+  --maize: #d4a017;
+  --maguey: #5a7a4a;
+  --concreto: #a8a090;
+  --tierra-oaxaquena: #7a4e2a;
+  --oxblood: #4a1020;
+  --warm-silver: #d8ceb8;
+  --terracotta: #b05a3a;
+  --ink-blue: #1a2440;
+  --graphite: #484848;
+  --dusty-violet: #604870;
+  --saffron: #c08820;
+  --shadow-crimson: #2a1018;
+
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -55,7 +75,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
