@@ -13,12 +13,13 @@ function App() {
 
 return (
   <main id = "homepage">
-    <div className = "center-body">
 
+    <div className = "center-body">
       <nav className = "links">
-        {repeated_links.map((item, i) => (
-          <div>
-            <a key = {i} href = {item.source}>{item.name}</a>
+        {/* Skipping every "sixth" element, to give a sense of randomness */}
+        {repeated_links.filter((_, i) => (i+1) % 6 !== 0).map((item, i) => (
+          <div key = {i}>
+            <a key = {i} href = {item.source} target = "_blank">{item.name}</a>
           </div>
         ))
         }
@@ -43,8 +44,8 @@ return (
           </div>
         </div>
       </header>
-
     </div>
+
  </main>
   )
 }
