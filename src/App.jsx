@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { BIO } from './content'
 
 function App() {
 
@@ -12,11 +13,11 @@ return (
       <header>
         <div className = "name-and-contact">
           <div className = "name">
-            <h1>Jeshua Nava Avila</h1>
+            <h1> {BIO.name} </h1>
           </div>
           <div className = "contact">
-            <p>jeshua.navaavila@gmail.com</p>
-            <p>322 102 0423</p>
+            <p> {BIO.email} </p>
+            <p> {BIO.phone} </p>
           </div>
         </div>
       </header>
