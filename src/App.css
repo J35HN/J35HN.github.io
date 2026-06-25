@@ -36,6 +36,7 @@ main {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .name-and-contact .contact {
@@ -46,4 +47,10 @@ main {
   color: #000;
   font-size: 30px;
   margin: 0px 0;
+}
+
+.name-and-contact .contact .social-media {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }

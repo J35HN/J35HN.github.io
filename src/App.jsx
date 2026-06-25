@@ -10,6 +10,7 @@ function App() {
 return (
   <main id = "homepage">
     <div className = "center-body">
+
       <header>
         <div className = "name-and-contact">
           <div className = "name">
@@ -18,10 +19,20 @@ return (
           <div className = "contact">
             <p> {BIO.email} </p>
             <p> {BIO.phone} </p>
+            <div className = "social-media">
+              <a href = {BIO.linkedIn.url} target="_blank">
+                <img src = {BIO.linkedIn.image} alt = "LinkedIn-svg"/>
+              </a>
+              <a href = {BIO.gitHub.url} target="_blank">
+                <img src = {BIO.gitHub.image} alt = "GitHub-svg"/>
+              </a>
+            </div>
           </div>
         </div>
       </header>
+
       <nav></nav>
+
     </div>
  </main>
   )
