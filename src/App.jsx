@@ -4,13 +4,26 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { BIO } from './content'
+import { NAVIGATION } from './content'
 
 function App() {
+
+  // Big array for repeated links
+  const repeated_links = Array.from( {length: 50} , () => NAVIGATION).flat() 
 
 return (
   <main id = "homepage">
     <div className = "center-body">
 
+      <nav className = "links">
+        {repeated_links.map((item, i) => (
+          <div>
+            <a key = {i} href = {item.source}>{item.name}</a>
+          </div>
+        ))
+        }
+      </nav>
+      
       <header>
         <div className = "name-and-contact">
           <div className = "name">
@@ -30,8 +43,6 @@ return (
           </div>
         </div>
       </header>
-
-      <nav></nav>
 
     </div>
  </main>
