@@ -9,8 +9,18 @@ function App() {
 return (
   <main id = "homepage">
     <div className = "center-body">
+      <header>
+        <div className = "name-and-contact">
+          <div className = "name">
+            <h1>Jeshua Nava Avila</h1>
+          </div>
+          <div className = "contact">
+            <p>jeshua.navaavila@gmail.com</p>
+            <p>322 102 0423</p>
+          </div>
+        </div>
+      </header>
       <nav></nav>
-      <h1>Jeshua Nava Avila</h1>
     </div>
  </main>
   )
