@@ -13,9 +13,9 @@ function App() {
 
 return (
   <main id = "homepage">
-    {/* background */}
 
-    {/* Content */}
+    <canvas id = "canvas" className = "canvas-background"></canvas>
+
     <div className = "screen-page">
       <div className = "center-body">
         <nav className = "links">

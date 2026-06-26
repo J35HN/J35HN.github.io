@@ -1,8 +1,15 @@
 main {
   width: 100%;
   height: 100vh;
-  display:flex;
+  display:grid;
+  grid-template-columns: 1fr;
   background-color: var(--barragan-magenta);
+}
+
+main .canvas-background {
+  background-color: var(--raw-concrete);
+  width: 100%;
+  height: 100%;
 }
 
 main .screen-page {
