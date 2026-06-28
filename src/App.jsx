@@ -1,12 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { BIO } from './content'
 import { NAVIGATION } from './content'
+import { InitCanvas } from './scripts/homepage-background'
 
 function App() {
+
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    InitCanvas(canvas);
+  }, []);
 
   // Big array for repeated links
   const repeated_links = Array.from( {length: 50} , () => NAVIGATION).flat() 
@@ -14,7 +23,7 @@ function App() {
 return (
   <main id = "homepage">
 
-    <canvas id = "canvas" className = "canvas-background"></canvas>
+    <canvas id = "canvas" className = "canvas-background" ref={canvasRef}></canvas>
 
     <div className = "screen-page">
       <div className = "center-body">
