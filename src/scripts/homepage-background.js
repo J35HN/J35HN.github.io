@@ -25,8 +25,33 @@
 // Position (x, y)
 // Transparency (0 - 1)
 // Random interval to reach that transparency (from 1 to 60 seconds). A step will be calculated by `1 / choseen_seconds`. Add step each call?. 
-// 
 
-export function InitCanvas(canvas) {
+class Square {
+    constructor(size, color) {
+        this.size = size;
+        this.color = color;
+        this.transparency = 0.0;
+        this.time = Math.floor(Math.random() * (61 - 1) + 1); // Number between 1 and 60.
+    }
+
+    displayAtt(){
+        console.log(`Size: ${this.size}`);
+        console.log(`color: ${this.color}`);
+        console.log(`transparency: ${this.transparency}`);
+        console.log(`time: ${this.time}`);
+    }
+}
+
+
+export function InitValues(canvas) {
+    // Set the canvas to CSS rendered values.
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
     canvas.style.background = "#3b5e3a";
+    console.log(`height: ${canvas.height}`);
+    console.log(`width: ${canvas.width}`);
 };
+
+export function OnResize(canvas) {
+    console.log("resized: ");
+}

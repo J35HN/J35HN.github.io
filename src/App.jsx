@@ -5,7 +5,8 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { BIO } from './content'
 import { NAVIGATION } from './content'
-import { InitCanvas } from './scripts/homepage-background'
+import { InitValues } from './scripts/homepage-background'
+import { OnResize } from './scripts/homepage-background'
 
 function App() {
 
@@ -14,7 +15,22 @@ function App() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    InitCanvas(canvas);
+
+    // Let React handle canvas sizing and resize.
+    const syncSize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      OnResize(canvas);
+    };
+
+    // Update size for InitValues.
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    InitValues(canvas);
+
+    // Event listener and clean up to avoid memory leak (pile of listeners that nevet get removed if there is no clean up).
+    window.addEventListener('resize', syncSize);
+    return () => window.removeEventListener('resize', syncSize);
   }, []);
 
   // Big array for repeated links
