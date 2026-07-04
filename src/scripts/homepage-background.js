@@ -56,9 +56,9 @@ let x = 0;
 let y = 0;
 let sizeOfSquare = 0;
 let amountOfSquaresY = 0;
-let lengthX = 0;
+let amountOfSquaresX = 8;
 const leftSquaresArray = new Array();
-const rigthSquaresArray = new Array();
+const rightSquaresArray = new Array();
 
 function paintSquares(canvas, squaresArray) {
     const ctx = canvas.getContext("2d");
@@ -93,7 +93,7 @@ function getRandomColor() {
 
 // Update the information of the size of squares and amount of square in Y axis.
 function updateSquaresInfo(canvas) {
-    sizeOfSquare = Math.ceil(canvas.width * 0.25) / 8;
+    sizeOfSquare = Math.ceil(canvas.width * 0.25) / amountOfSquaresX;
     if (canvas.height % sizeOfSquare != 0) {
         amountOfSquaresY = Math.floor(canvas.height / sizeOfSquare) + 1;
     } else {
@@ -101,22 +101,21 @@ function updateSquaresInfo(canvas) {
     }
 }
 
-
-export function InitValues(canvas) {
-    updateSquaresInfo(canvas);
-    // get 25% of canvas size. Will be the fill size in planeX for both sides.
-    lengthX = canvas.width * 0.25;
-
+function updateSquaresArray() {
+    x = 0;
+    y = 0;
+    let indexCount = 0;
 
     // Left side of canvas
     for (let e = 0; e < amountOfSquaresY; e++) {
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < amountOfSquaresX; i++) {
             let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
-            leftSquaresArray.push(tempSquareObj);
+            leftSquaresArray[indexCount] = tempSquareObj;
+            indexCount += 1;
             x += sizeOfSquare;
         }
         y += sizeOfSquare;
-        if (x >= lengthX) {
+        if (x >= canvas.width * 0.25) {
             x = 0;
         }
     }
@@ -124,10 +123,12 @@ export function InitValues(canvas) {
     // Right side of canvas
     x = canvas.width * 0.75;
     y = 0;
+    indexCount = 0;
     for (let e = 0; e < amountOfSquaresY; e++) {
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < amountOfSquaresX; i++) {
             let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
-            rigthSquaresArray.push(tempSquareObj);
+            rightSquaresArray[indexCount] = tempSquareObj;
+            indexCount += 1;
             x += sizeOfSquare;
         }
         y += sizeOfSquare;
@@ -135,8 +136,14 @@ export function InitValues(canvas) {
             x = canvas.width * 0.75;
         }
     }
+}
+
+
+export function InitValues(canvas) {
+    updateSquaresInfo(canvas);
+    updateSquaresArray();
+    paintSquares(canvas, rightSquaresArray);
     paintSquares(canvas, leftSquaresArray);
-    paintSquares(canvas, rigthSquaresArray);
 };
 
 export function OnResize(canvas) {
