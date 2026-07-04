@@ -44,6 +44,10 @@ class Square {
     get getX() { return this.x }
     get getY() { return this.y }
 
+    set updateTransparency( value ) {
+        this.color = `${this.color.slice(0, -3)} ${value})`;
+    }
+
     displayAtt(){
         console.log(`Size: ${this.size}`);
         console.log(`color: ${this.color}`);
@@ -112,6 +116,7 @@ function updateSquaresArray() {
     for (let e = 0; e < amountOfSquaresY; e++) {
         for (let i = 0; i < amountOfSquaresX; i++) {
             let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
+            tempSquareObj.updateTransparency = 0.0;
             leftSquaresArray[indexCount] = tempSquareObj;
             indexCount += 1;
             x += sizeOfSquare;
