@@ -52,6 +52,14 @@ class Square {
     }
 }
 
+let x = 0;
+let y = 0;
+let sizeOfSquare = 0;
+let amountOfSquaresY = 0;
+let lengthX = 0;
+const leftSquaresArray = new Array();
+const rigthSquaresArray = new Array();
+
 function paintSquares(canvas, squaresArray) {
     const ctx = canvas.getContext("2d");
     for (let i = 0; i < squaresArray.length; i++){
@@ -83,31 +91,22 @@ function getRandomColor() {
     return color;
 }
 
-export function InitValues(canvas) {
-    canvas.style.background = "#d4c422";
-
-    // get 25% of canvas size. Will be the fill size in planeX for both sides.
-    let LengthX = canvas.width * 0.25;
-    let sizeOfSquare = Math.ceil(LengthX / 8);
-    let amountOfSquaresY = 0;
-    console.log(`Canvas Size X: ${canvas.width}`);
-    console.log(`Canvas Size Y: ${canvas.height}`);
-    console.log(`size of squares ${sizeOfSquare}`);
-    console.log(`Division of height and size ${canvas.height / sizeOfSquare}`);
+// Update the information of the size of squares and amount of square in Y axis.
+function updateSquaresInfo(canvas) {
+    sizeOfSquare = Math.ceil(canvas.width * 0.25) / 8;
     if (canvas.height % sizeOfSquare != 0) {
-        amountOfSquaresY = Math.floor(canvas.height / sizeOfSquare) + 1; // add one just in case.
+        amountOfSquaresY = Math.floor(canvas.height / sizeOfSquare) + 1;
     } else {
-        amountOfSquaresY = canvas.height / sizeOfSquare; 
+        amountOfSquaresY = canvas.height / sizeOfSquare;
     }
-    console.log(`amount of squares in Y: ${amountOfSquaresY}`);
-    console.log("-------");
+}
 
-    let x = 0;
-    let y = 0;
 
-    let arraySize = LengthX * amountOfSquaresY;
-    const leftSquaresArray = new Array();
-    const rigthSquaresArray = new Array();
+export function InitValues(canvas) {
+    updateSquaresInfo(canvas);
+    // get 25% of canvas size. Will be the fill size in planeX for both sides.
+    lengthX = canvas.width * 0.25;
+
 
     // Left side of canvas
     for (let e = 0; e < amountOfSquaresY; e++) {
@@ -117,7 +116,7 @@ export function InitValues(canvas) {
             x += sizeOfSquare;
         }
         y += sizeOfSquare;
-        if (x >= LengthX) {
+        if (x >= lengthX) {
             x = 0;
         }
     }
