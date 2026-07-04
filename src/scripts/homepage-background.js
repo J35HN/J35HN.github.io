@@ -26,13 +26,23 @@
 // Transparency (0 - 1)
 // Random interval to reach that transparency (from 1 to 60 seconds). A step will be calculated by `1 / choseen_seconds`. Add step each call?. 
 
+import { COLORS } from "../content";
+
 class Square {
-    constructor(size, color) {
+    constructor(size, color, x, y) {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
         this.time = Math.floor(Math.random() * (61 - 1) + 1); // Number between 1 and 60.
+        this.x = x;
+        this.y = y;
     }
+
+    get getColor() { return this.color; }
+    get getSize() { return this.size; }
+
+    get getX() { return this.x }
+    get getY() { return this.y }
 
     displayAtt(){
         console.log(`Size: ${this.size}`);
@@ -42,14 +52,92 @@ class Square {
     }
 }
 
+function paintSquares(canvas, squaresArray) {
+    const ctx = canvas.getContext("2d");
+    for (let i = 0; i < squaresArray.length; i++){
+        let tempObj = squaresArray[i];
+        ctx.fillStyle = tempObj.getColor;
+        ctx.fillRect(tempObj.getX, tempObj.getY, tempObj.getSize, tempObj.getSize);
+    }
+}
+
+function getRandomColor() {
+    let color = "#fff";
+
+    // get size of COLORS object with counting keys
+    let arraySize = Object.keys(COLORS).length; 
+
+    // generate a random number to that size
+    let randomNum = Math.floor( Math.random() * arraySize );
+
+    // for in loop or map and stop at random number
+    let i = 0;
+    for (const property in COLORS) {
+        if ( i == randomNum ) {
+            color = COLORS[property];
+            break;
+        }        
+        i += 1;
+    }
+    // return color string
+    return color;
+}
 
 export function InitValues(canvas) {
-    // Set the canvas to CSS rendered values.
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    canvas.style.background = "#3b5e3a";
-    console.log(`height: ${canvas.height}`);
-    console.log(`width: ${canvas.width}`);
+    canvas.style.background = "#d4c422";
+
+    // get 25% of canvas size. Will be the fill size in planeX for both sides.
+    let LengthX = canvas.width * 0.25;
+    let sizeOfSquare = Math.ceil(LengthX / 8);
+    let amountOfSquaresY = 0;
+    console.log(`Canvas Size X: ${canvas.width}`);
+    console.log(`Canvas Size Y: ${canvas.height}`);
+    console.log(`size of squares ${sizeOfSquare}`);
+    console.log(`Division of height and size ${canvas.height / sizeOfSquare}`);
+    if (canvas.height % sizeOfSquare != 0) {
+        amountOfSquaresY = Math.floor(canvas.height / sizeOfSquare) + 1; // add one just in case.
+    } else {
+        amountOfSquaresY = canvas.height / sizeOfSquare; 
+    }
+    console.log(`amount of squares in Y: ${amountOfSquaresY}`);
+    console.log("-------");
+
+    let x = 0;
+    let y = 0;
+
+    let arraySize = LengthX * amountOfSquaresY;
+    const leftSquaresArray = new Array();
+    const rigthSquaresArray = new Array();
+
+    // Left side of canvas
+    for (let e = 0; e < amountOfSquaresY; e++) {
+        for (let i = 0; i < 8; i++) {
+            let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
+            leftSquaresArray.push(tempSquareObj);
+            x += sizeOfSquare;
+        }
+        y += sizeOfSquare;
+        if (x >= LengthX) {
+            x = 0;
+        }
+    }
+
+    // Right side of canvas
+    x = canvas.width * 0.75;
+    y = 0;
+    for (let e = 0; e < amountOfSquaresY; e++) {
+        for (let i = 0; i < 8; i++) {
+            let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
+            rigthSquaresArray.push(tempSquareObj);
+            x += sizeOfSquare;
+        }
+        y += sizeOfSquare;
+        if (x >= canvas.width) {
+            x = canvas.width * 0.75;
+        }
+    }
+    paintSquares(canvas, leftSquaresArray);
+    paintSquares(canvas, rigthSquaresArray);
 };
 
 export function OnResize(canvas) {
