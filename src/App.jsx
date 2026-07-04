@@ -26,11 +26,14 @@ function App() {
     // Update size for InitValues.
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    InitValues(canvas);
+    const intervalId = InitValues(canvas);
 
     // Event listener and clean up to avoid memory leak (pile of listeners that nevet get removed if there is no clean up).
     window.addEventListener('resize', syncSize);
-    return () => window.removeEventListener('resize', syncSize);
+    return () => {
+      window.removeEventListener('resize', syncSize);
+      clearInterval(intervalId);
+    };
   }, []);
 
   // Big array for repeated links

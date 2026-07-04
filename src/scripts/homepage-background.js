@@ -28,12 +28,22 @@
 
 import { COLORS } from "../content";
 
+const FRAMES_PER_SECOND = 30;
+
+let x = 0;
+let y = 0;
+let sizeOfSquare = 0;
+let amountOfSquaresY = 0;
+let amountOfSquaresX = 10;
+const leftSquaresArray = new Array();
+const rightSquaresArray = new Array();
+
 class Square {
     constructor(size, color, x, y) {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
-        this.time = Math.floor(Math.random() * (61 - 1) + 1); // Number between 1 and 60.
+        this.time = Math.floor(Math.random() * (61 - 10) + 10); // Number between 1 and 60.
         this.x = x;
         this.y = y;
     }
@@ -45,24 +55,17 @@ class Square {
     get getY() { return this.y }
 
     set updateTransparency( value ) {
-        this.color = `${this.color.slice(0, -3)} ${value})`;
+        this.color = `${this.color.slice(0, this.color.lastIndexOf(','))}, ${value})`;
     }
 
-    displayAtt(){
-        console.log(`Size: ${this.size}`);
-        console.log(`color: ${this.color}`);
-        console.log(`transparency: ${this.transparency}`);
-        console.log(`time: ${this.time}`);
+    // call this function if you are sure to update to the next transparency value.
+    nextTransparency() {
+        let step = 1 / (this.time * FRAMES_PER_SECOND);
+        let next = Math.min(this.transparency + step, 1.0);
+        this.transparency = next;
+        this.updateTransparency = next;
     }
 }
-
-let x = 0;
-let y = 0;
-let sizeOfSquare = 0;
-let amountOfSquaresY = 0;
-let amountOfSquaresX = 8;
-const leftSquaresArray = new Array();
-const rightSquaresArray = new Array();
 
 function paintSquares(canvas, squaresArray) {
     const ctx = canvas.getContext("2d");
@@ -134,6 +137,7 @@ function updateSquaresArray() {
     for (let e = 0; e < amountOfSquaresY; e++) {
         for (let i = 0; i < amountOfSquaresX; i++) {
             let tempSquareObj = new Square(sizeOfSquare, getRandomColor(), x, y);
+            tempSquareObj.updateTransparency = 0.0;
             rightSquaresArray[indexCount] = tempSquareObj;
             indexCount += 1;
             x += sizeOfSquare;
@@ -145,17 +149,32 @@ function updateSquaresArray() {
     }
 }
 
+function calcTransparency(squaresArray) {
+    for (let i = 0; i < squaresArray.length; i++) {
+        if (Math.floor((Math.random() * (10 - 1) + 1)) == 1){
+            squaresArray[i].nextTransparency();
+        }
+    }
+}
+
+function StartTransparencyLoop(canvas) {
+    return setInterval(function()
+    {
+        calcTransparency(rightSquaresArray);
+        calcTransparency(leftSquaresArray);
+        paintSquares(canvas, rightSquaresArray);
+        paintSquares(canvas, leftSquaresArray);
+    }, 1000 / FRAMES_PER_SECOND);
+}
+
 
 export function InitValues(canvas) {
     updateSquaresInfo(canvas);
     updateSquaresArray();
-    paintSquares(canvas, rightSquaresArray);
-    paintSquares(canvas, leftSquaresArray);
+    return StartTransparencyLoop(canvas);
 };
 
 export function OnResize(canvas) {
     updateSquaresInfo(canvas);
     updateSquaresArray();
-    paintSquares(canvas, rightSquaresArray);
-    paintSquares(canvas, leftSquaresArray);
 }
