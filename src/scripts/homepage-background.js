@@ -105,6 +105,8 @@ function updateSquaresArray() {
     x = 0;
     y = 0;
     let indexCount = 0;
+    leftSquaresArray.length = 0;
+    rightSquaresArray.length = 0;
 
     // Left side of canvas
     for (let e = 0; e < amountOfSquaresY; e++) {
@@ -147,5 +149,8 @@ export function InitValues(canvas) {
 };
 
 export function OnResize(canvas) {
-    console.log("resized: ");
+    updateSquaresInfo(canvas);
+    updateSquaresArray();
+    paintSquares(canvas, rightSquaresArray);
+    paintSquares(canvas, leftSquaresArray);
 }
