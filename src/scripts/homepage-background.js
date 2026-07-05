@@ -43,7 +43,7 @@ class Square {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
-        this.time = Math.floor(Math.random() * (61 - 10) + 10); // Number between 1 and 60.
+        this.time = Math.floor(Math.random() * (101 - 10) + 10); // Number between "(max - min) + min".
         this.x = x;
         this.y = y;
     }
@@ -64,6 +64,15 @@ class Square {
         let next = Math.min(this.transparency + step, 1.0);
         this.transparency = next;
         this.updateTransparency = next;
+    }
+
+    isMouseInSquare(x, y) {
+        if ( x >= this.x && x <= this.x + this.size ) {
+            if ( y>= this.y && y <= this.y + this.size ) {
+                this.transparency = 0.0;
+                this.updateTransparency = 0.0;
+            }
+        }
     }
 }
 
@@ -177,4 +186,8 @@ export function InitValues(canvas) {
 export function OnResize(canvas) {
     updateSquaresInfo(canvas);
     updateSquaresArray();
+}
+
+export function OnMouseMovement(canvas, event) {
+    console.log("mouse movement");
 }

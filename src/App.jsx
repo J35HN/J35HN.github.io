@@ -7,6 +7,7 @@ import { BIO } from './content'
 import { NAVIGATION } from './content'
 import { InitValues } from './scripts/homepage-background'
 import { OnResize } from './scripts/homepage-background'
+import { OnMouseMovement } from './scripts/homepage-background'
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
       OnResize(canvas);
     };
 
+    const mouseMovement = (event) => {
+      OnMouseMovement(canvas, event);
+    }
+
     // Update size for InitValues.
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
@@ -30,10 +35,13 @@ function App() {
 
     // Event listener and clean up to avoid memory leak (pile of listeners that nevet get removed if there is no clean up).
     window.addEventListener('resize', syncSize);
+    window.addEventListener('mousemove', mouseMovement);
     return () => {
       window.removeEventListener('resize', syncSize);
+      window.removeEventListener('mousemove', mouseMovement);
       clearInterval(intervalId);
     };
+
   }, []);
 
   // Big array for repeated links
