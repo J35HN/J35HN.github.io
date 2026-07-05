@@ -43,7 +43,7 @@ class Square {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
-        this.time = Math.floor(Math.random() * (101 - 10) + 10); // Number between "(max - min) + min".
+        this.time = Math.floor(Math.random() * (61 - 10) + 10); // Number between "(max - min) + min".
         this.x = x;
         this.y = y;
     }
@@ -158,24 +158,43 @@ function updateSquaresArray() {
     }
 }
 
-function calcTransparency(squaresArray) {
+function CalcTransparency(squaresArray) {
     for (let i = 0; i < squaresArray.length; i++) {
-        if (Math.floor((Math.random() * (10 - 1) + 1)) == 1){
-            squaresArray[i].nextTransparency();
-        }
+        squaresArray[i].nextTransparency();
     }
+}
+
+function clearCanvas(canvas) {
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function StartTransparencyLoop(canvas) {
     return setInterval(function()
     {
-        calcTransparency(rightSquaresArray);
-        calcTransparency(leftSquaresArray);
+        CalcTransparency(rightSquaresArray);
+        CalcTransparency(leftSquaresArray);
+        clearCanvas(canvas);
         paintSquares(canvas, rightSquaresArray);
         paintSquares(canvas, leftSquaresArray);
     }, 1000 / FRAMES_PER_SECOND);
 }
 
+function CalcMousePosition(canvas, event) {
+    const rect = canvas.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+    return {
+        x: mouseX,
+        y: mouseY
+    }
+}
+
+function checkMouseInSquares(x, y, array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].isMouseInSquare(x, y);
+    }
+}
 
 export function InitValues(canvas) {
     updateSquaresInfo(canvas);
@@ -189,5 +208,7 @@ export function OnResize(canvas) {
 }
 
 export function OnMouseMovement(canvas, event) {
-    console.log("mouse movement");
+    var mousePos = CalcMousePosition(canvas, event);
+    checkMouseInSquares(mousePos.x, mousePos.y, leftSquaresArray);
+    checkMouseInSquares(mousePos.x, mousePos.y, rightSquaresArray);
 }
