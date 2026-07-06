@@ -1,4 +1,6 @@
 // Imports
+import ghImage from './assets/GitHub-svg.svg';
+import liImage from './assets/LinkedIn-svg.svg';
 
 // Colors
 // export const COLORS_TEST = {
@@ -59,8 +61,8 @@ export const BIO = {
     name: "Jeshua Nava Avila",
     email: "jeshua.navaavila@gmail.com",
     phone: "322 102 0423",
-    linkedIn: { url: "https://www.linkedin.com/in/jeshuanavaavila/", image: "./src/assets/LinkedIn-svg.svg" },
-    gitHub: { url: "https://github.com/J35HN", image: "./src/assets/GitHub-svg.svg" }
+    linkedIn: { url: "https://www.linkedin.com/in/jeshuanavaavila/", image: liImage },
+    gitHub: { url: "https://github.com/J35HN", image: ghImage }
 };
 
 // Navigation
