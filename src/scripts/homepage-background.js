@@ -34,7 +34,7 @@ let x = 0;
 let y = 0;
 let sizeOfSquare = 0;
 let amountOfSquaresY = 0;
-let amountOfSquaresX = 10;
+let amountOfSquaresX = 8;
 const leftSquaresArray = new Array();
 const rightSquaresArray = new Array();
 
@@ -43,7 +43,7 @@ class Square {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
-        this.time = Math.floor(Math.random() * (61 - 10) + 10); // Number between "(max - min) + min".
+        this.time = Math.floor(Math.random() * (16 - 2) + 2); // Number between "(max - min) + min".
         this.x = x;
         this.y = y;
     }

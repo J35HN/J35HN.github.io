@@ -38,6 +38,7 @@ main .screen-page {
   transform: translate(-50%, -50%);
   width: 75%;
   height: 25%;
+  background-color: #fff;
 }
 
 .center-body nav.links {
@@ -49,19 +50,30 @@ main .screen-page {
   text-align: center;
 }
 
+
 .links a {
   color: #000;
+  opacity: 0;
+  animation: fade-in ease forwards;
 }
+
+.links > div:nth-child(6n+1) a { animation-duration: 1s; }
+.links > div:nth-child(6n+2) a { animation-duration: 1.8s; }
+.links > div:nth-child(6n+3) a { animation-duration: 2.3s; }
+.links > div:nth-child(6n+4) a { animation-duration: 4.7s; }
+.links > div:nth-child(6n+5) a { animation-duration: 7.1s; }
+.links > div:nth-child(6n+6) a { animation-duration: 8.45s; }
 
 .name-and-contact {
   width: 100%;
   height: 100%;
-  background-color: #fff;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   z-index: 3;
+  opacity: 0;
+  animation: fade-in ease 2s forwards;
 }
 
 .name-and-contact .contact {
@@ -78,4 +90,14 @@ main .screen-page {
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
