@@ -1,0 +1,16 @@
+main#photography-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#photography-page .content {
+  width: 50%;
+  text-align: center;
+}
+
+main#photography-page a {
+  color: var(--cenote);
+}

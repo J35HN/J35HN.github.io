@@ -11,6 +11,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         projects: resolve(__dirname, 'projects/index.html'),
+        volunteering: resolve(__dirname, 'volunteering/index.html'),
+        experiences: resolve(__dirname, 'experiences/index.html'),
+        photography: resolve(__dirname, 'photography/index.html'),
+        industry: resolve(__dirname, 'industry/index.html')
       },
     },
   },

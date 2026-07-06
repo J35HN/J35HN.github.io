@@ -1,0 +1,16 @@
+main#industry-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#industry-page .content {
+  width: 50%;
+  text-align: center;
+}
+
+main#industry-page a {
+  color: var(--cenote);
+}
