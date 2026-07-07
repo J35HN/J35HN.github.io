@@ -60,7 +60,7 @@ return (
             const isInternal = item.source.startsWith('/')
             return (
               <div key = {i}>
-                <a key = {i} href = {item.source} target = {isInternal ? undefined : "_blank"}>{item.name}</a>
+                <a key = {i} href = {item.source} target = {isInternal}>{item.name}</a>
               </div>
             )
           })

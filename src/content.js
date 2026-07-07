@@ -67,9 +67,9 @@ export const BIO = {
 
 // Navigation
 export const NAVIGATION = [
-    { name: "Industry", source: "/industry/" },
-    { name: "Projects", source: "/projects/" },
-    { name: "Volunteering", source: "/volunteering/" },
-    { name: "Experiences", source: "/experiences/" },
-    { name: "Photography", source: "/photography/" },
+    { name: "Industry", source: "route/industry/" },
+    { name: "Projects", source: "route/projects/" },
+    { name: "Volunteering", source: "route/volunteering/" },
+    { name: "Experiences", source: "route/experiences/" },
+    { name: "Photography", source: "route/photography/" },
 ];

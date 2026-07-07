@@ -10,11 +10,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        projects: resolve(__dirname, 'projects/index.html'),
-        volunteering: resolve(__dirname, 'volunteering/index.html'),
-        experiences: resolve(__dirname, 'experiences/index.html'),
-        photography: resolve(__dirname, 'photography/index.html'),
-        industry: resolve(__dirname, 'industry/index.html')
+        projects: resolve(__dirname, 'i/projects/index.html'),
+        volunteering: resolve(__dirname, 'i/volunteering/index.html'),
+        experiences: resolve(__dirname, 'i/experiences/index.html'),
+        photography: resolve(__dirname, 'i/photography/index.html'),
+        industry: resolve(__dirname, 'i/industry/index.html')
       },
     },
   },
