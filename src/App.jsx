@@ -57,10 +57,9 @@ return (
         <nav className = "links">
           {/* Skipping every "sixth" element, to give a sense of randomness */}
           {repeated_links.filter((_, i) => (i+1) % 6 !== 0).map((item, i) => {
-            const isInternal = item.source.startsWith('/')
             return (
               <div key = {i}>
-                <a key = {i} href = {item.source} target = {isInternal}>{item.name}</a>
+                <a key = {i} href = {item.source}>{item.name}</a>
               </div>
             )
           })
