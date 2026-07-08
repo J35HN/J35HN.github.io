@@ -1,14 +1,13 @@
 import '../css/Industry.css'
+import PageFrame from '../components/PageFrame'
 
 function Industry() {
   return (
-    <main id="industry-page">
+    <PageFrame>
       <div className="content">
-        <h1>Industry</h1>
-        <p>This is a real, separate static page — served at /industry/ with no client-side router involved.</p>
         <a href="/">Back to home</a>
       </div>
-    </main>
+    </PageFrame>
   )
 }
 
