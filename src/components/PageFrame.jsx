@@ -8,6 +8,7 @@ function PageFrame({ children }) {
             <div className = "background-columns" />
             <div className = "page-frame">
                 <header className = "page-header">
+                    <a href = "/" className = "block-bth"></a>
                     {NAVIGATION.map((item, i) => {
                         return (
                             <div key = {i}>

@@ -34,6 +34,25 @@ main header.page-header {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    position: relative;
+}
+
+
+.page-header a.block-bth {
+    display: inline-block;
+    background-color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+.page-header a {
+    font-size: 12px;
+}
+
+.block {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
 }
 
 main .page-content {

@@ -67,9 +67,15 @@ export const BIO = {
 
 // Navigation
 export const NAVIGATION = [
-    { name: "Industry", source: "/route/industry/" },
+    { name: "Industry", source: "/route/industry/"},
     { name: "Projects", source: "/route/projects/" },
     { name: "Volunteering", source: "/route/volunteering/" },
     { name: "Experiences", source: "/route/experiences/" },
     { name: "Photography", source: "/route/photography/" },
+];
+
+// Per page content
+export const INDUSTRY = [
+    { title: "Presales Consultant @ Oracle", md: ""},
+    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: ""},
 ];
