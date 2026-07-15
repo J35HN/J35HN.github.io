@@ -1,22 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import '../css/PageFrame.css'
-import { NAVIGATION } from "../content";
+import Header from "./Header";
 
 function PageFrame({ children }) {
     return (
         <main className = "page">
             <div className = "background-columns" />
             <div className = "page-frame">
-                <header className = "page-header">
-                    <a href = "/" className = "block-bth"></a>
-                    {NAVIGATION.map((item, i) => {
-                        return (
-                            <div key = {i}>
-                                <a key = {i} href = {item.source}>{item.name}</a>
-                            </div>
-                        )
-                    })}
-                </header>
+                <Header />
                 <div className = "page-content">
                     {children}
                 </div>
