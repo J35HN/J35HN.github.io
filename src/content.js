@@ -56,6 +56,13 @@ export const COLORS = {
   saffron: "rgba(192, 136, 32, 1)",
   shadow_crimson: "rgba(42, 16, 24, 1)"
 };
+
+export const TONES = [
+    "tone-iron-oxide", "tone-asphalt", "tone-blood-red", "tone-industrial-green", "tone-cobalt", "tone-tezontle",
+    "tone-barragan-magenta", "tone-obsidian", "tone-maize", "tone-maguey", "tone-tierra-oaxaquena",
+    "tone-oxblood", "tone-terracotta", "tone-ink-blue", "tone-dusty-violet", "tone-saffron", "tone-shadow-crimson"
+];
+
 // Bio
 export const BIO = {
     name: "Jeshua Nava Avila",

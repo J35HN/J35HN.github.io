@@ -1,12 +1,20 @@
 import '../css/Industry.css'
 import PageFrame from '../components/PageFrame'
+import { INDUSTRY } from '../content'
+import { TONES } from '../content'
 
 function Industry() {
   return (
     <PageFrame>
-      <div className="content">
-        <a href="/">Back to home</a>
-      </div>
+      {
+        INDUSTRY.map( (item, i) => {
+          return (
+            <div key = {i} className = {`page-frame-navigator ${TONES[ Math.floor( Math.random() * (TONES.length - 1)) ]}`}>
+              {item.title}
+            </div>
+          )
+        })
+      }
     </PageFrame>
   )
 }

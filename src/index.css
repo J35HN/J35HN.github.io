@@ -88,3 +88,21 @@ h2 {
 p {
   margin: 0;
 }
+
+.tone-iron-oxide { background-color: var(--iron-oxide); }
+.tone-asphalt { background-color: var(--asphalt); }
+.tone-blood-red { background-color: var(--blood-red); }
+.tone-industrial-green { background-color: var(--industrial-green); }
+.tone-cobalt { background-color: var(--cobalt); }
+.tone-tezontle { background-color: var(--tezontle); }
+.tone-barragan-magenta { background-color: var(--barragan-magenta); }
+.tone-obsidian { background-color: var(--obsidian); }
+.tone-maize { background-color: var(--maize); }
+.tone-maguey { background-color: var(--maguey); }
+.tone-tierra-oaxaquena { background-color: var(--tierra-oaxaquena); }
+.tone-oxblood { background-color: var(--oxblood); }
+.tone-terracotta { background-color: var(--terracotta); }
+.tone-ink-blue { background-color: var(--ink-blue); }
+.tone-dusty-violet { background-color: var(--dusty-violet); }
+.tone-saffron { background-color: var(--saffron); }
+.tone-shadow-crimson { background-color: var(--shadow-crimson); }
