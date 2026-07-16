@@ -1,0 +1,12 @@
+.page-frame-navigator {
+  width: 80%;
+  height: 3em;
+  align-self: center;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
