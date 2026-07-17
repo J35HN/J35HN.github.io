@@ -1,14 +1,13 @@
 import '../css/Volunteering.css'
+import PageFrame from '../components/PageFrame'
+import Navigator from '../components/Navigator'
+import { VOLUNTEERING } from '../content'
 
 function Volunteering() {
   return (
-    <main id="volunteering-page">
-      <div className="content">
-        <h1>Volunteering</h1>
-        <p>This is a real, separate static page — served at /volunteering/ with no client-side router involved.</p>
-        <a href="/">Back to home</a>
-      </div>
-    </main>
+    <PageFrame>
+      <Navigator PageNavContent = { VOLUNTEERING } />
+    </PageFrame>
   )
 }
 
