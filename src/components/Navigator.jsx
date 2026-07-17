@@ -7,7 +7,7 @@ function Navigator( {PageNavContent} ) {
         {
             PageNavContent.map( (item, i) => {
                 return (
-                    <a key = {i} href = "/" className = {`page-frame-navigator ${TONES[ Math.floor( Math.random() * (TONES.length - 1) ) ]}`}>
+                    <a key = {i} href = {`${item.url}`} className = {`page-frame-navigator ${TONES[ Math.floor( Math.random() * (TONES.length - 1) ) ]}`}>
                         {item.title}
                     </a>
                 )

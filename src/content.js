@@ -83,6 +83,31 @@ export const NAVIGATION = [
 
 // Per page content
 export const INDUSTRY = [
-    { title: "Presales Consultant @ Oracle", md: ""},
-    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: ""},
+    { title: "Presales Consultant @ Oracle", md: "", url: "/" },
+    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: "", url: "/" },
+];
+
+export const PROJECTS = [
+    { title: "iGEM 2023", md: "", url: "/" },
+    { title: "Garabatos by Lily", md: "", url: "/" },
+    { title: "University Projects", md: "", url: "/" }
+];
+
+export const EXPERIENCES = [
+    { title: "International Peer", md: "", url: "/" },
+    { title: "Debate Judge @ AMCO", md: "", url: "/" },
+    { title: "High School: Volleyball", md: "", url: "/" },
+    { title: "High School: Mexican Folk Dance", md: "", url: "/" },
+    { title: "High School: Captain", md: "", url: "/" }
+];
+
+export const VOLUNTEERING = [
+    { title: "SIGGRAPH 2023", md: "", url: "/" },
+    { title: "Bosque Primavera", md: "", url: "/" },
+    { title: "Dog adoption event", md: "", url: "/" },
+    { title: "Judge @ LEGO Unhearth", md: "", url: "/" },
+    { title: "MAZ", md: "", url: "/" },
+    { title: "FMMP", md: "", url: "/" },
+    { title: "Campamento Tortuguero Sayulita", md: "", url: "/" },
+    { title: "Mundo Daki", md: "", url: "/" }
 ];
