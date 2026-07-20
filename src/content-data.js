@@ -48,26 +48,26 @@ export const INDUSTRY = [
 ];
 
 export const PROJECTS = [
-    { title: "iGEM 2023", md: "", url: "/" },
+    { title: "iGEM 2023", md: "/src/md/igem_2023.md", url: "/route/projects/igem-2023/" },
     { title: "Garabatos by Lily", md: "", url: "/" },
-    { title: "University Projects", md: "", url: "/" }
+    { title: "University Projects", md: "/src/md/university_projects.md", url: "/route/projects/university-projects/" }
 ];
 
 export const EXPERIENCES = [
-    { title: "International Peer", md: "", url: "/" },
+    { title: "International Peer", md: "/src/md/international_peer.md", url: "/route/experiences/international-peer/" },
     { title: "Debate Judge @ AMCO", md: "", url: "/" },
-    { title: "High School: Volleyball", md: "", url: "/" },
-    { title: "High School: Mexican Folk Dance", md: "", url: "/" },
-    { title: "High School: Captain", md: "", url: "/" }
+    { title: "High School: Volleyball", md: "/src/md/hs_volleyball.md", url: "/route/experiences/high-school-volleyball/" },
+    { title: "High School: Mexican Folk Dance", md: "/src/md/hs_folk_dance.md", url: "/route/experiences/high-school-folk-dance/" },
+    { title: "High School: Captain", md: "/src/md/hs_captain.md", url: "/route/experiences/high-school-captain/" }
 ];
 
 export const VOLUNTEERING = [
-    { title: "SIGGRAPH 2023", md: "", url: "/" },
+    { title: "SIGGRAPH 2023", md: "/src/md/siggraph_2023.md", url: "/route/volunteering/siggraph-2023/" },
     { title: "Bosque Primavera", md: "", url: "/" },
     { title: "Dog adoption event", md: "", url: "/" },
     { title: "Judge @ LEGO Unhearth", md: "", url: "/" },
-    { title: "MAZ", md: "", url: "/" },
-    { title: "FMMP", md: "", url: "/" },
-    { title: "Campamento Tortuguero Sayulita", md: "", url: "/" },
-    { title: "Mundo Daki", md: "", url: "/" }
+    { title: "MAZ", md: "/src/md/maz.md", url: "/route/volunteering/maz/" },
+    { title: "FMMP", md: "/src/md/fmmp.md", url: "/route/volunteering/fmmp/" },
+    { title: "Campamento Tortuguero Sayulita", md: "/src/md/campamento_tortuguero.md", url: "/route/volunteering/campamento-tortuguero/" },
+    { title: "Mundo Daki", md: "/src/md/mundo_daki.md", url: "/route/volunteering/mundo-daki/" }
 ];
