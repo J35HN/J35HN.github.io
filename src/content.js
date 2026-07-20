@@ -84,7 +84,7 @@ export const NAVIGATION = [
 // Per page content
 export const INDUSTRY = [
     { title: "Presales Consultant @ Oracle", md: "", url: "/" },
-    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: "", url: "/" },
+    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: "src/md/roblox_intern.md", url: "/" },
 ];
 
 export const PROJECTS = [
