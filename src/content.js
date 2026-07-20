@@ -59,7 +59,7 @@ export const COLORS = {
 
 export const TONES = [
     "tone-iron-oxide", "tone-asphalt", "tone-blood-red", "tone-industrial-green", "tone-cobalt", "tone-tezontle",
-    "tone-barragan-magenta", "tone-obsidian", "tone-maize", "tone-maguey", "tone-tierra-oaxaquena",
+    "tone-barragan-magenta", "tone-cenote", "tone-obsidian", "tone-maize", "tone-maguey", "tone-tierra-oaxaquena",
     "tone-oxblood", "tone-terracotta", "tone-ink-blue", "tone-dusty-violet", "tone-saffron", "tone-shadow-crimson"
 ];
 
