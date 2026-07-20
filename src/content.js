@@ -56,6 +56,13 @@ export const COLORS = {
   saffron: "rgba(192, 136, 32, 1)",
   shadow_crimson: "rgba(42, 16, 24, 1)"
 };
+
+export const TONES = [
+    "tone-iron-oxide", "tone-asphalt", "tone-blood-red", "tone-industrial-green", "tone-cobalt", "tone-tezontle",
+    "tone-barragan-magenta", "tone-cenote", "tone-obsidian", "tone-maize", "tone-maguey", "tone-tierra-oaxaquena",
+    "tone-oxblood", "tone-terracotta", "tone-ink-blue", "tone-dusty-violet", "tone-saffron", "tone-shadow-crimson"
+];
+
 // Bio
 export const BIO = {
     name: "Jeshua Nava Avila",
@@ -67,9 +74,40 @@ export const BIO = {
 
 // Navigation
 export const NAVIGATION = [
-    { name: "Industry", source: "#" },
-    { name: "Projects", source: "#" },
-    { name: "Volunteering", source: "#" },
-    { name: "Experiences", source: "#" },
-    { name: "Photography", source: "#" },
+    { name: "Industry", source: "/route/industry/"},
+    { name: "Projects", source: "/route/projects/" },
+    { name: "Volunteering", source: "/route/volunteering/" },
+    { name: "Experiences", source: "/route/experiences/" },
+    { name: "Photography", source: "/route/photography/" },
+];
+
+// Per page content
+export const INDUSTRY = [
+    { title: "Presales Consultant @ Oracle", md: "", url: "/" },
+    { title: "Roblox Intern @ KaraOkulta, an Amber Studio", md: "", url: "/" },
+];
+
+export const PROJECTS = [
+    { title: "iGEM 2023", md: "", url: "/" },
+    { title: "Garabatos by Lily", md: "", url: "/" },
+    { title: "University Projects", md: "", url: "/" }
+];
+
+export const EXPERIENCES = [
+    { title: "International Peer", md: "", url: "/" },
+    { title: "Debate Judge @ AMCO", md: "", url: "/" },
+    { title: "High School: Volleyball", md: "", url: "/" },
+    { title: "High School: Mexican Folk Dance", md: "", url: "/" },
+    { title: "High School: Captain", md: "", url: "/" }
+];
+
+export const VOLUNTEERING = [
+    { title: "SIGGRAPH 2023", md: "", url: "/" },
+    { title: "Bosque Primavera", md: "", url: "/" },
+    { title: "Dog adoption event", md: "", url: "/" },
+    { title: "Judge @ LEGO Unhearth", md: "", url: "/" },
+    { title: "MAZ", md: "", url: "/" },
+    { title: "FMMP", md: "", url: "/" },
+    { title: "Campamento Tortuguero Sayulita", md: "", url: "/" },
+    { title: "Mundo Daki", md: "", url: "/" }
 ];

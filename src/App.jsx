@@ -56,11 +56,13 @@ return (
       <div className = "center-body">
         <nav className = "links">
           {/* Skipping every "sixth" element, to give a sense of randomness */}
-          {repeated_links.filter((_, i) => (i+1) % 6 !== 0).map((item, i) => (
-            <div key = {i}>
-              <a key = {i} href = {item.source} target = "_blank">{item.name}</a>
-            </div>
-          ))
+          {repeated_links.filter((_, i) => (i+1) % 6 !== 0).map((item, i) => {
+            return (
+              <div key = {i}>
+                <a key = {i} href = {item.source}>{item.name}</a>
+              </div>
+            )
+          })
           }
         </nav>
         
