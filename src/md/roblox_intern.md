@@ -4,7 +4,7 @@
 KaraOkulta serves as Mexico’s office for the Romanian game development company Amber Studios. They mainly provide QA services for other studios or game projects, but they also develop mobile and Roblox games/experiences.
 
 ## How did I end up as a Roblox Intern?
-In 2023, KaraOkulta launched their newest Roblox project, [Secret Neighbor] (https://www.secretneighbor.com/). With this newest experience, they were ready for a new project. So with a friend of mine, we decided to apply for the new intern positions. 
+In 2023, KaraOkulta launched their newest Roblox project, [Secret Neighbor](https://www.secretneighbor.com/). With this newest experience, they were ready for a new project. So with a friend of mine, we decided to apply for the new intern positions. 
 
 After being accepted at the studio, we had the decision to join a Unreal Engine project (C++) or a Roblox project (Luau). We decided to join the Roblox project because it was a rare opportunity and sounded fun.  
 
