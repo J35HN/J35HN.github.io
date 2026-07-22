@@ -46,7 +46,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -56,37 +56,32 @@ body {
 
 #root {
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
   display: flex;
 }
 
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  color: var(--barragan-magenta);
+  align-self: self-start;
+  margin: 0 20px 12px 20px;
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 18px;
   }
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: -0.5x;
+  align-self: self-start;
+  margin: 0 20px 12px 20px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 p {
-  margin: 0;
+  margin: 0 20px 18px 20px;
+  font-size: 12px; 
+  align-self: self-start;
 }
 
 .tone-iron-oxide { background-color: var(--iron-oxide); }
