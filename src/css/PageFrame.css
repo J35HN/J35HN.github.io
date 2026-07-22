@@ -13,6 +13,7 @@ main .background-columns {
     height: 100%;
     z-index: 1;
     position: absolute;
+    background-color: #fff;
 }
 
 main .page-frame {

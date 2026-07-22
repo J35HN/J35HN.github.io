@@ -28,6 +28,32 @@
 
 import { COLORS } from "../content";
 
+const SESSION_SEED_KEY = "background-seed";
+
+// Deterministic PRNG so the same seed always produces the same color sequence.
+function mulberry32(seed) {
+    let state = seed;
+    return function () {
+        state |= 0;
+        state = (state + 0x6D2B79F5) | 0;
+        let t = Math.imul(state ^ (state >>> 15), 1 | state);
+        t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+}
+
+// Reuses the same seed for the whole browser session (sessionStorage), so the
+// background looks consistent while navigating between pages.
+function getSessionSeed() {
+    const stored = sessionStorage.getItem(SESSION_SEED_KEY);
+    if (stored !== null) return Number(stored);
+    const seed = Math.floor(Math.random() * 2 ** 31);
+    sessionStorage.setItem(SESSION_SEED_KEY, String(seed));
+    return seed;
+}
+
+const seededRandom = mulberry32(getSessionSeed());
+
 const FRAMES_PER_SECOND = 30;
 
 let x = 0;
@@ -92,7 +118,7 @@ function getRandomColor() {
     let arraySize = Object.keys(COLORS).length; 
 
     // generate a random number to that size
-    let randomNum = Math.floor( Math.random() * arraySize );
+    let randomNum = Math.floor( seededRandom() * arraySize );
 
     // for in loop or map and stop at random number
     let i = 0;
@@ -117,7 +143,7 @@ function updateSquaresInfo(canvas) {
     }
 }
 
-function updateSquaresArray() {
+function updateSquaresArray(canvas) {
     x = 0;
     y = 0;
     let indexCount = 0;
@@ -198,13 +224,13 @@ function checkMouseInSquares(x, y, array) {
 
 export function InitValues(canvas) {
     updateSquaresInfo(canvas);
-    updateSquaresArray();
+    updateSquaresArray(canvas);
     return StartTransparencyLoop(canvas);
 };
 
 export function OnResize(canvas) {
     updateSquaresInfo(canvas);
-    updateSquaresArray();
+    updateSquaresArray(canvas);
 }
 
 export function OnMouseMovement(canvas, event) {

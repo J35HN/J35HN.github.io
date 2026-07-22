@@ -1,48 +1,12 @@
-import { useEffect, useState, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { BIO } from './content'
 import { NAVIGATION } from './content'
-import { InitValues } from './scripts/homepage-background'
-import { OnResize } from './scripts/homepage-background'
-import { OnMouseMovement } from './scripts/homepage-background'
+import Background from './components/Background'
 
 function App() {
-
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    // Let React handle canvas sizing and resize.
-    const syncSize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      OnResize(canvas);
-    };
-
-    const mouseMovement = (event) => {
-      OnMouseMovement(canvas, event);
-    }
-
-    // Update size for InitValues.
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    const intervalId = InitValues(canvas);
-
-    // Event listener and clean up to avoid memory leak (pile of listeners that nevet get removed if there is no clean up).
-    window.addEventListener('resize', syncSize);
-    window.addEventListener('mousemove', mouseMovement);
-    return () => {
-      window.removeEventListener('resize', syncSize);
-      window.removeEventListener('mousemove', mouseMovement);
-      clearInterval(intervalId);
-    };
-
-  }, []);
 
   // Big array for repeated links
   const repeated_links = Array.from( {length: 50} , () => NAVIGATION).flat() 
@@ -50,7 +14,7 @@ function App() {
 return (
   <main id = "homepage">
 
-    <canvas id = "canvas" className = "canvas-background" ref={canvasRef}></canvas>
+    <Background className = "canvas-background" />
 
     <div className = "screen-page">
       <div className = "center-body">
