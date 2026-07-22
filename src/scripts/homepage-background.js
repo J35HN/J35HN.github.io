@@ -69,7 +69,7 @@ class Square {
         this.size = size;
         this.color = color;
         this.transparency = 0.0;
-        this.time = Math.floor(Math.random() * (16 - 2) + 2); // Number between "(max - min) + min".
+        this.time = Math.floor(Math.random() * (5 - 2) + 2); // Number between "(max - min) + min".
         this.x = x;
         this.y = y;
     }
