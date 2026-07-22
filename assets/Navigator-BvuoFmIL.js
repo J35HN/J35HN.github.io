@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-BucG3ucl.js";import{s as t}from"./content-8cFrJrto.js";var n=e();function r({PageNavContent:e}){return(0,n.jsx)(n.Fragment,{children:e.map((e,r)=>(0,n.jsx)(`a`,{href:`${e.url}`,className:`page-frame-navigator ${t[Math.floor(Math.random()*(t.length-1))]}`,children:e.title},r))})}export{r as t};
