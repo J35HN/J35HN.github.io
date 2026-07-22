@@ -77,13 +77,20 @@ main .screen-page {
 }
 
 .name-and-contact .contact {
-  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name-and-contact .name h1 {
   color: #000;
   font-size: 30px;
   margin: 0px 0;
+}
+
+.name-and-contact .contact p {
+  margin: 0 0 0 0;
+  align-self: center;
 }
 
 .name-and-contact .contact .social-media {
