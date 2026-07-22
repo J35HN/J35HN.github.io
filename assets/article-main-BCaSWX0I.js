@@ -1,4 +1,4 @@
-import{a as e,i as t,n,o as r,r as i,t as a}from"./jsx-runtime-BucG3ucl.js";import{c as o,i as s,o as c,r as l}from"./content-8cFrJrto.js";import{t as u}from"./PageFrame-BorEPQH6.js";var d=i(),f=n(),p=a(),m=`# Campamento Tortuguero Sayulita
+import{a as e,i as t,n,o as r,r as i,t as a}from"./jsx-runtime-BucG3ucl.js";import{c as o,i as s,o as c,r as l}from"./Background-D1qoS82C.js";import{t as u}from"./PageFrame-svoRHVdx.js";var d=i(),f=n(),p=a(),m=`# Campamento Tortuguero Sayulita
 
 ## What is the Campamento Tortuguero de Sayulita?
 The Turtle Camp of Sayulita is a voluntary community project with the goal of relocating sea turtle nests and educating locals and visitors on how to protect nests from poaching. Over the last ten years, they have successfully liberated over 260,000 newborn turtles. 
