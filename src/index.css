@@ -102,3 +102,22 @@ p {
 .tone-dusty-violet { background-color: var(--dusty-violet); }
 .tone-saffron { background-color: var(--saffron); }
 .tone-shadow-crimson { background-color: var(--shadow-crimson); }
+
+.text-iron-oxide { color: var(--iron-oxide); }
+.text-asphalt { color: var(--asphalt); }
+.text-blood-red { color: var(--blood-red); }
+.text-industrial-green { color: var(--industrial-green); }
+.text-cobalt { color: var(--cobalt); }
+.text-tezontle { color: var(--tezontle); }
+.text-barragan-magenta { color: var(--barragan-magenta); }
+.text-cenote { color: var(--cenote); }
+.text-obsidian { color: var(--obsidian); }
+.text-maize { color: var(--maize); }
+.text-maguey { color: var(--maguey); }
+.text-tierra-oaxaquena { color: var(--tierra-oaxaquena); }
+.text-oxblood { color: var(--oxblood); }
+.text-terracotta { color: var(--terracotta); }
+.text-ink-blue { color: var(--ink-blue); }
+.text-dusty-violet { color: var(--dusty-violet); }
+.text-saffron { color: var(--saffron); }
+.text-shadow-crimson { color: var(--shadow-crimson); }
