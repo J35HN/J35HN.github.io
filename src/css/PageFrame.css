@@ -44,3 +44,9 @@ main .page-content {
         width: 80%;
     }
 }
+
+@media (min-width: 601px) and (max-width: 1100px) {
+    main .page-frame {
+        width: 70%;
+    }
+}
