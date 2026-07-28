@@ -10,3 +10,12 @@
   text-decoration: none;
   color: #fff;
 }
+
+@media (max-width: 600px) {
+  .page-frame-navigator {
+    width: 80%;
+    height: auto;
+    min-height: 3em;
+    padding: 0.5em;
+  }
+}

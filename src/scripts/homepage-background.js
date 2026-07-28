@@ -61,6 +61,8 @@ let y = 0;
 let sizeOfSquare = 0;
 let amountOfSquaresY = 0;
 let amountOfSquaresX = 8;
+const MOBILE_BREAKPOINT = 600;
+const MOBILE_SQUARES_X = 2;
 const leftSquaresArray = new Array();
 const rightSquaresArray = new Array();
 
@@ -135,6 +137,7 @@ function getRandomColor() {
 
 // Update the information of the size of squares and amount of square in Y axis.
 function updateSquaresInfo(canvas) {
+    amountOfSquaresX = canvas.width <= MOBILE_BREAKPOINT ? MOBILE_SQUARES_X : 8;
     sizeOfSquare = Math.ceil(canvas.width * 0.25) / amountOfSquaresX;
     if (canvas.height % sizeOfSquare != 0) {
         amountOfSquaresY = Math.floor(canvas.height / sizeOfSquare) + 1;

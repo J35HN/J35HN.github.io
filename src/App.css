@@ -82,9 +82,16 @@ main .screen-page {
   align-items: center;
 }
 
+.name-and-contact .name {
+  width: 100%;
+  text-align: center;
+}
+
 .name-and-contact .name h1 {
   color: #000;
-  font-size: 30px;
+  /* Scales from 22px at ~300px viewports up to 30px at ~1100px, instead of
+     jumping between two fixed sizes at a single breakpoint. */
+  font-size: clamp(22px, 19px + 1vw, 30px);
   margin: 0px 0;
 }
 
@@ -99,6 +106,16 @@ main .screen-page {
   flex-direction: row;
 }
 
+
+@media (max-width: 600px) {
+  .center-body {
+    width: 80%;
+  }
+
+  .center-body nav.links {
+    grid-template-columns: 1fr;
+  }
+}
 
 @keyframes fade-in {
   from {
