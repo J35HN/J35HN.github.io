@@ -100,6 +100,20 @@ main .screen-page {
 }
 
 
+@media (max-width: 600px) {
+  .center-body {
+    width: 80%;
+  }
+
+  .center-body nav.links {
+    grid-template-columns: 1fr;
+  }
+
+  .name-and-contact .name h1 {
+    font-size: 22px;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
