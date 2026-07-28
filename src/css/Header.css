@@ -27,8 +27,16 @@ header.header {
 @media (max-width: 600px) {
     header.header {
         width: 95%;
-        flex-wrap: wrap;
-        gap: 0.5em;
+        flex-wrap: nowrap;
+        gap: 0.3em;
+    }
+
+    .header a {
         font-size: 8px;
+    }
+
+    .header a.block-bth {
+        width: 1.25rem;
+        height: 1.25rem;
     }
 }
