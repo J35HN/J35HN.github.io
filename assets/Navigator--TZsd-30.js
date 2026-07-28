@@ -1,0 +1,1 @@
+import{r as e,t}from"./jsx-runtime-tAjCmdLg.js";import{s as n}from"./Background-Drna5VcM.js";var r=e(),i=t();function a({PageNavContent:e}){let[t]=(0,r.useState)(()=>e.map(()=>n[Math.floor(Math.random()*(n.length-1))]));return(0,i.jsx)(i.Fragment,{children:e.map((e,n)=>(0,i.jsx)(`a`,{href:`${e.url}`,className:`page-frame-navigator ${t[n]}`,children:e.title},n))})}export{a as t};
