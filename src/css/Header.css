@@ -22,3 +22,11 @@ header.header {
     font-size: 12px;
     color: #000;
 }
+
+@media (max-width: 600px) {
+    header.header {
+        width: 95%;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+}

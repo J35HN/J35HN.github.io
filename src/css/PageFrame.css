@@ -38,3 +38,9 @@ main .page-content {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+@media (max-width: 600px) {
+    main .page-frame {
+        width: 80%;
+    }
+}
